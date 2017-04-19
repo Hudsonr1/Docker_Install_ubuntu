@@ -25,56 +25,56 @@ Mas primeiro, vamos atualizar o banco de dados de pacotes:
 $ sudo apt-get update
 </pre>
 
-Agora, vamos instalar o Docker. Adicione ao sistema a chave GPG oficial do repositório do Docker:
+<Strong>Agora, vamos instalar o Docker. Adicione ao sistema a chave GPG oficial do repositório do Docker:</Strong>
 
 <pre>
  sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
  </pre>
 
-Adicione o repositório do Docker às fontes do APT:
+<Strong>Adicione o repositório do Docker às fontes do APT:</Strong>
 
 <pre>
 $ sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
 </pre>
 
-Atualize o banco de dados de pacotes com os pacotes do Docker a partir do novo repositório adicionado:
+<Strong>Atualize o banco de dados de pacotes com os pacotes do Docker a partir do novo repositório adicionado:</Strong>
 
 <pre>
 $ sudo apt-get update
 </pre>
 
-Certifique-se de que você está instalando a partir do repositório do Docker em vez do repositório padrão do Ubuntu 16.04:
+<Strong>Certifique-se de que você está instalando a partir do repositório do Docker em vez do repositório padrão do Ubuntu 16.04:</Strong>
 
 <pre>
 $ apt-cache policy docker-engine
 </pre>
 
-Você deverá ver uma saída semelhante à seguinte:
+<Strong>Você deverá ver uma saída semelhante à seguinte:</Strong>
 
 <pre>
 Output of apt-cache policy docker-enginedocker-engine: Installed: (none)  Candidate: 1.11.1-0~xenial  Version table:     1.11.1-0~xenial 500        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages     1.11.0-0~xenial 500        500 https://apt.dockerproject.org/repo ubuntu-xenial/main amd64 Packages
 </pre>
 
 Observe que o docker-engine não está instalado, mas o candidato para instalação é do repositório Docker do Ubuntu 16.04. O número da versão do docker-engine pode ser diferente.
-Finalmente, instale o Docker:
+<Strong>Finalmente, instale o Docker:</Strong>
 
 <pre>
 $ sudo apt-get install -y docker-engine
 </pre>
 
-O Docker agora será instalado, o daemon iniciado, e o processo habilitado para iniciar no boot. Verifique que ele está executando:
+<Strong>O Docker agora será instalado, o daemon iniciado, e o processo habilitado para iniciar no boot. Verifique que ele está executando:</Strong>
 
 <pre>
 $ sudo systemctl status docker
 </pre>
 
-A saída deve ser similar ao seguinte, mostrando que o serviço está ativo e em execução:<pre>[ secondary_label Output]● docker.service - Docker Application Container Engine   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)   Active: active (running) since Sun 2016-05-01 06:53:52 CDT; 1 weeks 3 days ago     Docs: https://docs.docker.com Main PID: 749 (docker)</pre>
+<Strong>A saída deve ser similar ao seguinte, mostrando que o serviço está ativo e em execução:</Strong><pre>[ secondary_label Output]● docker.service - Docker Application Container Engine   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)   Active: active (running) since Sun 2016-05-01 06:53:52 CDT; 1 weeks 3 days ago     Docs: https://docs.docker.com Main PID: 749 (docker)</pre>
 
 # Docker com Apache
 
-Imagem docker criada para servir como base de estudos ao servidor web apache.
+<Strong>Imagem docker criada para servir como base de estudos ao servidor web apache.</Strong>
 
-## Uso
+## Utilizando o Docker
 
 <Strong> Utilize:</Strong>
 
