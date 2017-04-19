@@ -84,9 +84,9 @@ Imagem docker criada para servir como base de estudos ao servidor web apache.
 
 <pre>docker run -dit --name apache-app --publish=9081:80 -v "$PWD":/usr/local/apache2/htdocs/ chicocx/docker-apache</pre>
 
-O parâmetro <pre>-v "$PWD":/usr/local/apache2/htdocs/</pre>configura o diretório de onde o comando docker é executado como sendo o ponto de montagem do diretório /usr/local/apache2/htdocs/ da imagem criada. No caso, "$PWD" retorna o diretório atual.
+<Strong>O parâmetro </Strong> <pre>-v "$PWD":/usr/local/apache2/htdocs/</pre>configura o diretório de onde o comando docker é executado como sendo o ponto de montagem do diretório /usr/local/apache2/htdocs/ da imagem criada. No caso, "$PWD" retorna o diretório atual.
 
-<Strong>É possível modificar esse diretório da seguinte forma:<Strong>
+<Strong>É possível modificar esse diretório da seguinte forma:</Strong>
 
 <pre>-v /diretorio/do/host:/usr/local/apache2/htdocs/</pre>
 
